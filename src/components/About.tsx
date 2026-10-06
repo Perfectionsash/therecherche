@@ -30,39 +30,43 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-20 md:py-28 bg-gray-50"
+      className="py-[80px] bg-surface"
       aria-labelledby="about-heading"
     >
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="section">
+        <div className="grid lg:grid-cols-2 gap-[80px] items-center">
           <div>
             <h2
               id="about-heading"
-              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+              className="font-display font-semibold text-heading-lg text-ink tracking-heading-lg leading-heading-lg"
             >
               Why Choose The Recherche?
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="font-text text-body text-ink-muted mt-6 leading-body tracking-body">
               With over 15 years of experience creating bespoke storage solutions, we combine
               traditional craftsmanship with modern design innovation. Every project begins with
               understanding your lifestyle and ends with storage that transforms your daily life.
             </p>
-            <p className="text-gray-600 mb-8">
+            <p className="font-text text-body text-ink-muted mt-6 leading-body tracking-body">
               From initial consultation to final installation, our dedicated team manages every
               detail. We use only premium materials, precision engineering, and time-honoured
               joinery techniques to create fitted furniture that stands the test of time.
             </p>
-            <ul className="space-y-4" role="list">
+            <ul className="space-y-6 mt-10" role="list">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="flex-shrink-0 w-12 h-12 bg-accent rounded-nav-pill flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{feature.title}</h4>
-                    <p className="text-gray-600 text-sm">{feature.description}</p>
+                    <h4 className="font-display font-semibold text-heading-sm text-ink tracking-heading-sm leading-heading-sm">
+                      {feature.title}
+                    </h4>
+                    <p className="font-text text-body text-ink-muted mt-2 leading-body tracking-body">
+                      {feature.description}
+                    </p>
                   </div>
                 </li>
               ))}
@@ -72,12 +76,14 @@ export function About() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center"
+                className="card-white text-center"
               >
-                <div className="font-display text-3xl md:text-4xl font-bold text-primary-600 mb-2">
+                <div className="font-display font-semibold text-heading text-ink mb-2 tracking-heading leading-heading">
                   {stat.value}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="font-text text-body-sm text-ink-muted tracking-body-sm leading-body-sm">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>

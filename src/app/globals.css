@@ -4,25 +4,323 @@
 
 @layer base {
   :root {
-    --font-inter: 'Inter', system-ui, sans-serif;
-    --font-display: 'Cal Sans', 'Inter', system-ui, sans-serif;
+    /* Apple Color Tokens */
+    --color-canvas: #ffffff;
+    --color-surface: #f3f6f6;
+    --color-surface-elevated: #fafafc;
+    --color-surface-muted: #e8e8ed;
+    --color-border: #dedfe2;
+    --color-ink: #1d1d1f;
+    --color-ink-muted: #6e6e73;
+    --color-ink-subtle: #444545;
+    --color-accent: #0071e3;
+    --color-accent-hover: #005bb5;
+    --color-link: #0066cc;
+    --color-ember: #b64400;
+
+    /* Typography */
+    --font-display: 'SF Pro Display', 'Inter', system-ui, sans-serif;
+    --font-text: 'SF Pro Text', 'Inter', system-ui, sans-serif;
+
+    /* Type Scale */
+    --text-caption: 12px;
+    --leading-caption: 1.33;
+    --tracking-caption: -0.12px;
+
+    --text-body-sm: 14px;
+    --leading-body-sm: 1.43;
+    --tracking-body-sm: -0.22px;
+
+    --text-body: 17px;
+    --leading-body: 1.47;
+    --tracking-body: -0.37px;
+
+    --text-subheading: 21px;
+    --leading-subheading: 1.38;
+    --tracking-subheading: 0.23px;
+
+    --text-heading-sm: 28px;
+    --leading-heading-sm: 1.14;
+    --tracking-heading-sm: 0.2px;
+
+    --text-heading: 40px;
+    --leading-heading: 1.1;
+    --tracking-heading: -0.12px;
+
+    --text-heading-lg: 56px;
+    --leading-heading-lg: 1.07;
+    --tracking-heading-lg: -0.28px;
+
+    --text-display: 80px;
+    --leading-display: 1.05;
+    --tracking-display: -1.2px;
+
+    /* Spacing */
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-10: 10px;
+    --space-14: 14px;
+    --space-20: 20px;
+    --space-28: 28px;
+    --space-40: 40px;
+    --space-57: 57px;
+    --space-80: 80px;
+    --space-160: 160px;
+
+    /* Border Radius */
+    --radius-card: 28px;
+    --radius-chip: 9999px;
+    --radius-button: 980px;
+    --radius-nav-pill: 32px;
+    --radius-small: 12px;
+
+    /* Shadows */
+    --shadow-subtle: rgba(0, 0, 0, 0.11) 0px 0px 1px 0px inset;
+    --shadow-xl: rgba(0, 0, 0, 0.05) 0px 0px 35px 20px;
+
+    /* Layout */
+    --page-max-width: 1440px;
+    --section-gap: 80px;
+    --card-padding: 40px;
+    --element-gap: 10px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-canvas: #1d1d1f;
+      --color-surface: #2d2d2f;
+      --color-surface-elevated: #3a3a3c;
+      --color-surface-muted: #48484a;
+      --color-border: #424245;
+      --color-ink: #f5f5f7;
+      --color-ink-muted: #a1a1a6;
+      --color-ink-subtle: #86868b;
+      --color-accent: #0a84ff;
+      --color-accent-hover: #409cff;
+      --color-link: #4da6ff;
+    }
   }
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    @apply antialiased text-gray-900 bg-white;
+    font-family: var(--font-text);
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
+    color: var(--color-ink);
+    background-color: var(--color-canvas);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   * {
-    @apply border-gray-200;
+    border-color: var(--color-border);
+  }
+
+  /* Apple-style focus ring */
+  *:focus-visible {
+    outline: none;
+    ring: 2px solid var(--color-accent);
+    ring-offset: 2px;
+    ring-offset-color: var(--color-canvas);
+  }
+
+  /* Text balance for headlines */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide scrollbar but keep scrollable */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  /* Primary Pill Button - Apple Blue */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    color: white;
+    font-family: var(--font-text);
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
+    border-radius: var(--radius-button);
+    padding: var(--space-14) var(--space-40);
+    transition: background-color 200ms ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  /* Text Link Button - Apple's default secondary action */
+  .btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-8);
+    background: transparent;
+    color: var(--color-ink);
+    font-family: var(--font-text);
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
+    transition: color 200ms ease;
+  }
+
+  .btn-text:hover {
+    color: var(--color-accent);
+  }
+
+  .btn-text::after {
+    content: '›';
+    display: inline-block;
+    transition: transform 200ms ease;
+  }
+
+  .btn-text:hover::after {
+    transform: translateX(4px);
+  }
+
+  /* Outlined Pill Link */
+  .btn-outlined {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--color-ink);
+    color: var(--color-ink);
+    font-family: var(--font-text);
+    font-size: var(--text-body-sm);
+    font-weight: 400;
+    line-height: var(--leading-body-sm);
+    letter-spacing: var(--tracking-body-sm);
+    border-radius: var(--radius-nav-pill);
+    padding: var(--space-10) var(--space-20);
+    transition: all 200ms ease;
+  }
+
+  .btn-outlined:hover {
+    background-color: var(--color-ink);
+    color: white;
+  }
+
+  /* Feature Card - White */
+  .card-white {
+    background-color: var(--color-canvas);
+    border-radius: var(--radius-card);
+    padding: var(--space-40);
+    border: none;
+    box-shadow: none;
+    transition: background-color 300ms ease;
+  }
+
+  .card-white:hover {
+    background-color: var(--color-surface-elevated);
+  }
+
+  /* Feature Card - Tinted */
+  .card-tinted {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-card);
+    padding: var(--space-40);
+    border: none;
+    box-shadow: none;
+    transition: background-color 300ms ease;
+  }
+
+  /* Section container */
+  .section {
+    max-width: var(--page-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-14);
+    padding-right: var(--space-14);
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      padding-left: var(--space-28);
+      padding-right: var(--space-28);
+    }
+  }
+
+  /* Section header block */
+  .section-header {
+    margin-bottom: var(--space-80);
+  }
+
+  .section-header h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--text-heading-lg);
+    line-height: var(--leading-heading-lg);
+    letter-spacing: var(--tracking-heading-lg);
+    color: var(--color-ink);
+  }
+
+  .section-header p {
+    font-family: var(--font-text);
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
+    color: var(--color-ink-muted);
+    margin-top: var(--space-14);
+    max-width: 42rem;
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    font-family: var(--font-text);
+    font-size: var(--text-body-sm);
+    font-weight: 600;
+    line-height: var(--leading-body-sm);
+    letter-spacing: var(--tracking-body-sm);
+    color: var(--color-ink);
+    text-transform: uppercase;
+  }
+
+  /* Badge */
+  .badge-new {
+    font-family: var(--font-text);
+    font-size: var(--text-caption);
+    font-weight: 400;
+    line-height: var(--leading-caption);
+    letter-spacing: var(--tracking-caption);
+    color: var(--color-ember);
+  }
+
+  /* Inline text link */
+  .link-inline {
+    font-family: var(--font-text);
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
+    color: var(--color-link);
+    text-underline-offset: 2px;
+    transition: color 200ms ease;
+  }
+
+  .link-inline:hover {
+    color: var(--color-accent);
   }
 }

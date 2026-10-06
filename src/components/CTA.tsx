@@ -4,22 +4,22 @@ export function CTA() {
   return (
     <section
       id="quote"
-      className="py-20 md:py-28 bg-primary-900 text-white"
+      className="py-[80px] bg-ink text-white"
       aria-labelledby="cta-heading"
     >
-      <div className="container mx-auto px-4 text-center">
+      <div className="section text-center">
         <h2
           id="cta-heading"
-          className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+          className="font-display font-semibold text-heading-lg text-white tracking-heading-lg leading-heading-lg"
         >
           Ready to Transform Your Space?
         </h2>
-        <p className="text-lg md:text-xl text-primary-100 mb-10 max-w-2xl mx-auto">
+        <p className="font-text text-body text-ink-muted mt-4 max-w-2xl mx-auto leading-body tracking-body">
           Book your free, no-obligation design consultation. Our expert designers will
           visit your home, measure your space, and create a bespoke 3D visualisation.
         </p>
         <form
-          className="max-w-md mx-auto space-y-4"
+          className="max-w-md mx-auto space-y-4 mt-12"
           action="#"
           method="POST"
         >
@@ -32,7 +32,7 @@ export function CTA() {
                 name="firstName"
                 placeholder="First Name"
                 required
-                className="w-full px-4 py-3 rounded-lg bg-primary-800 border border-primary-700 text-white placeholder-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                className="w-full px-4 py-4 rounded-button bg-surface-elevated border border-border text-white placeholder-ink-muted focus:outline-none focus:ring-2 focus:ring-accent font-text text-body"
               />
             </div>
             <div>
@@ -43,7 +43,7 @@ export function CTA() {
                 name="lastName"
                 placeholder="Last Name"
                 required
-                className="w-full px-4 py-3 rounded-lg bg-primary-800 border border-primary-700 text-white placeholder-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                className="w-full px-4 py-4 rounded-button bg-surface-elevated border border-border text-white placeholder-ink-muted focus:outline-none focus:ring-2 focus:ring-accent font-text text-body"
               />
             </div>
           </div>
@@ -55,7 +55,7 @@ export function CTA() {
               name="email"
               placeholder="Email Address"
               required
-              className="w-full px-4 py-3 rounded-lg bg-primary-800 border border-primary-700 text-white placeholder-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+              className="w-full px-4 py-4 rounded-button bg-surface-elevated border border-border text-white placeholder-ink-muted focus:outline-none focus:ring-2 focus:ring-accent font-text text-body"
             />
           </div>
           <div>
@@ -66,7 +66,7 @@ export function CTA() {
               name="phone"
               placeholder="Phone Number"
               required
-              className="w-full px-4 py-3 rounded-lg bg-primary-800 border border-primary-700 text-white placeholder-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+              className="w-full px-4 py-4 rounded-button bg-surface-elevated border border-border text-white placeholder-ink-muted focus:outline-none focus:ring-2 focus:ring-accent font-text text-body"
             />
           </div>
           <div>
@@ -77,16 +77,16 @@ export function CTA() {
               name="postcode"
               placeholder="Postcode (for area coverage check)"
               required
-              className="w-full px-4 py-3 rounded-lg bg-primary-800 border border-primary-700 text-white placeholder-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+              className="w-full px-4 py-4 rounded-button bg-surface-elevated border border-border text-white placeholder-ink-muted focus:outline-none focus:ring-2 focus:ring-accent font-text text-body"
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-white text-primary-900 hover:bg-primary-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
+            className="btn-primary w-full mt-2"
           >
             Book Free Design Visit
           </button>
-          <p className="text-sm text-primary-300 text-center">
+          <p className="font-text text-body-sm text-ink-muted text-center tracking-body-sm leading-body-sm">
             We'll contact you within 24 hours to arrange a convenient time.
           </p>
         </form>
