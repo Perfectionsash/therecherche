@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/robots/route": "app/api/robots/route.js",
+  "/api/sitemap/route": "app/api/sitemap/route.js",
+  "/contact/page": "app/contact/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/guides/page": "app/guides/page.js",
+  "/fitted-wardrobes/page": "app/fitted-wardrobes/page.js",
+  "/page": "app/page.js",
+  "/sliding-wardrobe-doors/page": "app/sliding-wardrobe-doors/page.js",
+  "/home-office-storage/page": "app/home-office-storage/page.js",
+  "/portfolio/page": "app/portfolio/page.js",
+  "/walk-in-wardrobes/page": "app/walk-in-wardrobes/page.js"
+}
