@@ -1,9 +1,12 @@
 import { Metadata } from 'next';
+import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
-import { Services } from '@/components/Services';
-import { About } from '@/components/About';
-import { Testimonials } from '@/components/Testimonials';
-import { CTA } from '@/components/CTA';
+import { Portfolio } from '@/components/Portfolio';
+import { BrandStory } from '@/components/BrandStory';
+import { LocalDesigners } from '@/components/LocalDesigners';
+import { HomeVisit } from '@/components/HomeVisit';
+import { Collections } from '@/components/Collections';
+import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
@@ -103,13 +106,18 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={[organizationSchema, localBusinessSchema, productSchema]} />
-      <main className="min-h-screen">
-        <Hero />
-        <Services />
-        <About />
-        <Testimonials />
-        <CTA />
-      </main>
+      <div className="min-h-screen bg-bone">
+        <Header />
+        <main>
+          <Hero />
+          <Portfolio />
+          <BrandStory />
+          <LocalDesigners />
+          <HomeVisit />
+          <Collections />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -32,13 +32,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   openGraph: {
     type: 'website',
@@ -46,7 +39,7 @@ export const metadata: Metadata = {
     url: 'https://therecherche.co.uk',
     siteName: 'The Recherche',
     title: 'The Recherche | Bespoke Fitted Wardrobes & Storage Solutions',
-    description: 'The Recherche creates bespoke fitted wardrobes, sliding doors, and home storage solutions. Expert design, premium materials, and professional installation across the UK.',
+    description: 'The Recherche creates bespoke fitted wardrobes, sliding doors, and home storage solutions.',
     images: [
       {
         url: '/og-image.jpg',
@@ -61,7 +54,6 @@ export const metadata: Metadata = {
     title: 'The Recherche | Bespoke Fitted Wardrobes',
     description: 'Expert design, premium materials, and professional installation across the UK.',
     images: ['/og-image.jpg'],
-    creator: '@therecherche',
   },
   icons: {
     icon: '/favicon.ico',
@@ -76,8 +68,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#1d1d1f' },
+    { media: '(prefers-color-scheme: light)', color: '#f2edde' },
+    { media: '(prefers-color-scheme: dark)', color: '#1a1612' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -94,10 +86,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
-      <body className="font-text antialiased">
+      <body className="font-body antialiased bg-bone text-ink">
         {children}
         <Analytics />
         <SpeedInsights />

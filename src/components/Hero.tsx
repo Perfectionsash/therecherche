@@ -2,64 +2,70 @@
 
 export function Hero() {
   return (
-    <section
-      className="relative min-h-[90vh] flex items-center justify-center bg-canvas"
-      aria-labelledby="hero-heading"
-    >
-      <div className="section py-[160px] px-4 md:px-8 text-center">
-        <h1
-          id="hero-heading"
-          className="font-display font-semibold text-display text-ink
-                     tracking-display leading-display text-balance mx-auto max-w-4xl"
-        >
-          Bespoke Fitted Wardrobes
-          <br />
-          <span className="text-accent">Designed for You</span>
-        </h1>
-        <p className="font-text text-body text-ink-muted mt-10 max-w-2xl mx-auto text-balance leading-body tracking-body">
-          Transform your space with custom-designed fitted wardrobes, sliding doors, and
-          innovative storage solutions. Expert craftsmanship, premium materials, and
-          professional installation across the UK.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-16">
-          <a
-            href="#quote"
-            className="btn-primary"
-          >
-            Get Your Free Design Quote
-          </a>
-          <a
-            href="#portfolio"
-            className="btn-text"
-          >
-            View Our Work
-          </a>
-        </div>
-        <div className="mt-20 flex flex-wrap justify-center gap-8 text-body-sm text-ink-muted">
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>Free Home Design Visit</span>
+    <section className="relative" aria-labelledby="hero-heading">
+      {/* 3-column full-height image row - contact sheet style */}
+      <div className="image-row" role="list" aria-label="Featured wardrobe projects">
+        <article className="image-row-item" role="listitem">
+          <div className="photo-frame" style={{ minHeight: '85vh' }}>
+            <img
+              src="/hero-wardrobe-1.jpg"
+              alt="Bespoke fitted wardrobe with sliding doors in modern bedroom"
+              loading="eager"
+            />
           </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>10-Year Guarantee</span>
+          <p className="caption photo-caption">Fitted Wardrobe — London Residence</p>
+        </article>
+        <article className="image-row-item" role="listitem">
+          <div className="photo-frame" style={{ minHeight: '85vh' }}>
+            <img
+              src="/hero-wardrobe-2.jpg"
+              alt="Walk-in wardrobe with integrated lighting and island unit"
+              loading="eager"
+            />
           </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>UK Manufactured</span>
+          <p className="caption photo-caption">Walk-In Wardrobe — Surrey Home</p>
+        </article>
+        <article className="image-row-item" role="listitem">
+          <div className="photo-frame" style={{ minHeight: '85vh' }}>
+            <img
+              src="/hero-wardrobe-3.jpg"
+              alt="Home office storage with floor-to-ceiling cabinetry"
+              loading="eager"
+            />
           </div>
-        </div>
+          <p className="caption photo-caption">Home Office Storage — Manchester</p>
+        </article>
       </div>
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
-        <svg className="w-6 h-6 text-ink-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
+
+      {/* Display word marker - wayfinding */}
+      <div className="section-wayfinding" style={{ paddingTop: '60px', paddingBottom: '20px' }}>
+        <h1 id="hero-heading" className="display-marker">
+          THE RECHERCHE
+        </h1>
+      </div>
+
+      {/* Intro paragraph */}
+      <div className="content-container" style={{ paddingTop: '20px', paddingBottom: '60px' }}>
+        <p className="subheading">
+          Bespoke fitted wardrobes, sliding doors, and home storage solutions.
+          Expert design, premium materials, and professional installation across the UK.
+        </p>
+      </div>
+
+      {/* CTA row */}
+      <div className="content-container flex flex-wrap gap-6" style={{ paddingBottom: '60px' }}>
+        <a
+          href="#quote"
+          className="font-body text-body-sm text-ink border border-ink px-8 py-4 hover:bg-ink hover:text-bone transition-all"
+        >
+          Book Free Design Visit
+        </a>
+        <a
+          href="/brochure"
+          className="font-body text-body-sm text-ink border border-ink px-8 py-4 hover:bg-ink hover:text-bone transition-all"
+        >
+          Request Brochure
+        </a>
       </div>
     </section>
   );
