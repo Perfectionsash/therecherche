@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navItems = [
   { label: 'Fitted Wardrobes', href: '/fitted-wardrobes' },
@@ -54,8 +55,15 @@ export function Header() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-20 py-4">
         {/* Logo */}
-        <Link href="/" className="font-display font-medium text-display text-ink tracking-normal hover:opacity-80 transition-opacity">
-          THE RECHERCHE
+        <Link href="/" className="hover:opacity-80 transition-opacity" aria-label="The Recherche - Home">
+          <Image
+            src="/logo.png"
+            alt="The Recherche"
+            width={180}
+            height={29}
+            className="h-auto w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
