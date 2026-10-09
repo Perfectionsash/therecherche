@@ -1,3 +1,4 @@
+// Force Vercel rebuild: 2026-10-09
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
