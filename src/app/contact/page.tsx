@@ -32,51 +32,110 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={contactSchema} />
-      <main className="min-h-screen">
-        <section className="py-20 bg-primary-50" aria-labelledby="contact-heading">
-          <div className="container mx-auto px-4 text-center">
-            <h1 id="contact-heading" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-              Get in Touch
+      <main className="min-h-screen bg-bone">
+        {/* Hero Section */}
+        <section className="section-bone" style={{ paddingTop: '100px', paddingBottom: '80px' }}>
+          <div className="content-container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <h1 className="display-marker" style={{ marginBottom: '20px' }}>
+              GET IN TOUCH
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px' }}>
               Ready to transform your space? Book a free design visit or ask us anything.
             </p>
           </div>
         </section>
-        <section className="py-20" aria-labelledby="form-heading">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-16">
+
+        {/* Contact Form Section */}
+        <section className="section-bone" aria-labelledby="form-heading" style={{ paddingTop: '60px', paddingBottom: '80px' }}>
+          <div className="content-container" style={{ maxWidth: '1400px', margin: '0 auto', paddingLeft: '20px', paddingRight: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
               <div>
-                <h2 id="form-heading" className="font-display text-3xl font-bold text-gray-900 mb-6">Request a Free Quote</h2>
-                <p className="text-gray-600 mb-8">Fill in your details and we'll contact you within 24 hours to arrange a convenient design visit.</p>
+                <h2 id="form-heading" className="font-display font-medium text-subheading text-ink mb-6" style={{ fontSize: '36px', lineHeight: '44px' }}>
+                  Request a Free Quote
+                </h2>
+                <p className="body-text" style={{ marginBottom: '40px', color: '#000' }}>
+                  Fill in your details and we&rsquo;ll contact you within 24 hours to arrange a convenient design visit.
+                </p>
                 <form className="space-y-6" action="#" method="POST">
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
-                      <input type="text" id="firstName" name="firstName" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      <label htmlFor="firstName" className="font-body text-body-sm text-ink block mb-2">
+                        First Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        required
+                        className="w-full px-4 py-3 border border-ink bg-transparent font-body text-body-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-ink transition-colors"
+                        style={{ borderRadius: '0' }}
+                      />
                     </div>
                     <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
-                      <input type="text" id="lastName" name="lastName" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      <label htmlFor="lastName" className="font-body text-body-sm text-ink block mb-2">
+                        Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        required
+                        className="w-full px-4 py-3 border border-ink bg-transparent font-body text-body-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-ink transition-colors"
+                        style={{ borderRadius: '0' }}
+                      />
                     </div>
                   </div>
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-                      <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      <label htmlFor="email" className="font-body text-body-sm text-ink block mb-2">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 border border-ink bg-transparent font-body text-body-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-ink transition-colors"
+                        style={{ borderRadius: '0' }}
+                      />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
-                      <input type="tel" id="phone" name="phone" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      <label htmlFor="phone" className="font-body text-body-sm text-ink block mb-2">
+                        Phone *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        className="w-full px-4 py-3 border border-ink bg-transparent font-body text-body-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-ink transition-colors"
+                        style={{ borderRadius: '0' }}
+                      />
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="postcode" className="block text-sm font-medium text-gray-700 mb-1">Postcode *</label>
-                    <input type="text" id="postcode" name="postcode" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    <label htmlFor="postcode" className="font-body text-body-sm text-ink block mb-2">
+                      Postcode *
+                    </label>
+                    <input
+                      type="text"
+                      id="postcode"
+                      name="postcode"
+                      required
+                      className="w-full px-4 py-3 border border-ink bg-transparent font-body text-body-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-ink transition-colors"
+                      style={{ borderRadius: '0' }}
+                    />
                   </div>
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Interested In</label>
-                    <select id="service" name="service" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <label htmlFor="service" className="font-body text-body-sm text-ink block mb-2">
+                      Interested In
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      className="w-full px-4 py-3 border border-ink bg-transparent font-body text-body-sm text-ink focus:outline-none focus:border-ink transition-colors"
+                      style={{ borderRadius: '0' }}
+                    >
                       <option value="">Select a service</option>
                       <option value="fitted-wardrobes">Fitted Wardrobes</option>
                       <option value="sliding-doors">Sliding Wardrobe Doors</option>
@@ -87,41 +146,62 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Additional Details</label>
-                    <textarea id="message" name="message" rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" placeholder="Tell us about your project..."></textarea>
+                    <label htmlFor="message" className="font-body text-body-sm text-ink block mb-2">
+                      Additional Details
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      className="w-full px-4 py-3 border border-ink bg-transparent font-body text-body-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-ink transition-colors resize-none"
+                      style={{ borderRadius: '0' }}
+                      placeholder="Tell us about your project..."
+                    />
                   </div>
-                  <button type="submit" className="w-full bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+                  <button
+                    type="submit"
+                    className="w-full font-body text-body-sm text-ink border border-ink px-8 py-4 hover:bg-ink hover:text-bone transition-all"
+                    style={{ borderRadius: '0' }}
+                  >
                     Submit Enquiry
                   </button>
                 </form>
               </div>
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <h3 className="font-display text-2xl font-bold text-gray-900 mb-6">Other Ways to Reach Us</h3>
+              <div className="p-8" style={{ border: '1px solid #e8e0d0' }}>
+                <h3 className="font-display font-medium text-subheading text-ink mb-6" style={{ fontSize: '28px', lineHeight: '36px' }}>
+                  Other Ways to Reach Us
+                </h3>
                 <dl className="space-y-6">
                   <div>
-                    <dt className="font-semibold text-gray-900">Phone</dt>
-                    <dd className="text-gray-600 mt-1"><a href="tel:+44XXXXXXXXXX" className="hover:text-primary-600">+44 XXX XXXXXXX</a></dd>
+                    <dt className="font-body text-body-sm font-medium text-ink">Phone</dt>
+                    <dd className="body-text mt-1" style={{ color: '#000' }}>
+                      <a href="tel:+44XXXXXXXXXX" className="link-plain hover:opacity-60">+44 XXX XXXXXXX</a>
+                    </dd>
                   </div>
                   <div>
-                    <dt className="font-semibold text-gray-900">Email</dt>
-                    <dd className="text-gray-600 mt-1"><a href="mailto:info@therecherche.co.uk" className="hover:text-primary-600">info@therecherche.co.uk</a></dd>
+                    <dt className="font-body text-body-sm font-medium text-ink">Email</dt>
+                    <dd className="body-text mt-1" style={{ color: '#000' }}>
+                      <a href="mailto:info@therecherche.co.uk" className="link-plain hover:opacity-60">info@therecherche.co.uk</a>
+                    </dd>
                   </div>
                   <div>
-                    <dt className="font-semibold text-gray-900">Showroom</dt>
-                    <dd className="text-gray-600 mt-1">123 Design Street, London SW1A 1AA</dd>
+                    <dt className="font-body text-body-sm font-medium text-ink">Showroom</dt>
+                    <dd className="body-text mt-1" style={{ color: '#000' }}>123 Design Street, London SW1A 1AA</dd>
                   </div>
                   <div>
-                    <dt className="font-semibold text-gray-900">Opening Hours</dt>
-                    <dd className="text-gray-600 mt-1 space-y-1">
+                    <dt className="font-body text-body-sm font-medium text-ink">Opening Hours</dt>
+                    <dd className="body-text mt-1 space-y-1" style={{ color: '#000' }}>
                       <div>Mon–Fri: 9am – 6pm</div>
                       <div>Sat: 10am – 4pm</div>
                       <div>Sun: Closed</div>
                     </dd>
                   </div>
                 </dl>
-                <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
-                  <h4 className="font-semibold text-gray-900 mb-2">Free Design Visit</h4>
-                  <p className="text-gray-600 text-sm">We'll come to you, measure your space, show 3D designs, and provide a fixed quote — all with no obligation.</p>
+                <div className="mt-8 p-6" style={{ border: '1px solid #e8e0d0' }}>
+                  <h4 className="font-body text-body-sm font-medium text-ink mb-2">Free Design Visit</h4>
+                  <p className="body-text" style={{ color: '#000', fontSize: '14px' }}>
+                    We&rsquo;ll come to you, measure your space, show 3D designs, and provide a fixed quote — all with no obligation.
+                  </p>
                 </div>
               </div>
             </div>

@@ -59,21 +59,32 @@ export default function WalkInWardrobesPage() {
   return (
     <>
       <JsonLd data={[productSchema, faqSchema]} />
-      <main className="min-h-screen">
-        <section className="py-20 bg-primary-50" aria-labelledby="page-title">
-          <div className="container mx-auto px-4 text-center">
-            <h1 id="page-title" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-              Walk-In Wardrobes
+      <main className="min-h-screen bg-bone">
+        {/* Hero Section */}
+        <section className="section-bone" style={{ paddingTop: '100px', paddingBottom: '80px' }}>
+          <div className="content-container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <h1 className="display-marker" style={{ marginBottom: '20px' }}>
+              WALK-IN WARDROBES
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px' }}>
               Luxury dressing rooms designed around your lifestyle. Islands, lighting, accessories storage, and more.
             </p>
+            <a
+              href="#quote"
+              className="font-body text-body-sm text-ink border border-ink px-8 py-4 hover:bg-ink hover:text-bone transition-all inline-block"
+            >
+              Start Your Design
+            </a>
           </div>
         </section>
-        <section className="py-20" aria-labelledby="features-heading">
-          <div className="container mx-auto px-4">
-            <h2 id="features-heading" className="font-display text-3xl font-bold text-gray-900 text-center mb-12">Features & Options</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+
+        {/* Features Section */}
+        <section className="section-bone" aria-labelledby="features-heading" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
+          <div className="content-container" style={{ maxWidth: '1400px', margin: '0 auto', paddingLeft: '20px', paddingRight: '20px' }}>
+            <h2 id="features-heading" className="display-marker" style={{ marginBottom: '40px', textAlign: 'center' }}>
+              FEATURES & OPTIONS
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { title: 'Centre Islands', desc: 'Storage drawers, jewellery trays, glass tops, integrated seating' },
                 { title: 'Smart Lighting', desc: 'Motion sensors, LED strips, colour temperature control, dimmable' },
@@ -82,18 +93,29 @@ export default function WalkInWardrobesPage() {
                 { title: 'Seating', desc: 'Upholstered ottomans, built-in benches, vanity stools' },
                 { title: 'Mirrors', desc: 'Full-length, illuminated, anti-fog, tri-fold, sliding panels' },
               ].map((feature, i) => (
-                <div key={i} className="bg-white p-8 rounded-xl border border-gray-100 hover:border-primary-300 hover:shadow-lg transition-all">
-                  <h3 className="font-display text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.desc}</p>
-                </div>
+                <article key={i} className="group">
+                  <div className="photo-frame" style={{ aspectRatio: '1', marginBottom: '16px' }}>
+                    <img
+                      src="/feature-placeholder.jpg"
+                      alt={`${feature.title} example`}
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="body-text font-medium" style={{ color: '#000', marginBottom: '8px' }}>{feature.title}</p>
+                  <p className="caption" style={{ color: '#000', opacity: 0.7 }}>{feature.desc}</p>
+                </article>
               ))}
             </div>
           </div>
         </section>
-        <section className="py-20 bg-gray-50" aria-labelledby="process-heading">
-          <div className="container mx-auto px-4">
-            <h2 id="process-heading" className="font-display text-3xl font-bold text-gray-900 text-center mb-12">Our Design Process</h2>
-            <ol className="max-w-4xl mx-auto space-y-8" role="list">
+
+        {/* Process Section */}
+        <section className="section-bone border-t border-ink" aria-labelledby="process-heading" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
+          <div className="content-container" style={{ maxWidth: '1400px', margin: '0 auto', paddingLeft: '20px', paddingRight: '20px' }}>
+            <h2 id="process-heading" className="display-marker" style={{ marginBottom: '40px', textAlign: 'center' }}>
+              OUR DESIGN PROCESS
+            </h2>
+            <ol className="space-y-8" role="list" style={{ maxWidth: '900px', margin: '0 auto' }}>
               {[
                 { step: '01', title: 'Consultation', desc: 'We visit your home, discuss your needs, and measure the space.' },
                 { step: '02', title: '3D Design', desc: 'Our designers create photorealistic 3D visualisations of your walk-in.' },
@@ -101,22 +123,37 @@ export default function WalkInWardrobesPage() {
                 { step: '04', title: 'Manufacturing', desc: 'Hand-crafted in our UK workshop using premium materials (3–4 weeks).' },
                 { step: '05', title: 'Installation', desc: 'Professional fitting by our experienced team (typically 2–3 days).' },
               ].map((item, i) => (
-                <li key={i} className="flex gap-6">
-                  <span className="font-display text-3xl font-bold text-primary-200 flex-shrink-0 w-16">{item.step}</span>
+                <li key={i} className="flex gap-6" style={{ paddingBottom: '24px', borderBottom: '1px solid #e8e0d0' }}>
+                  <span className="font-display font-bold text-ink flex-shrink-0 w-16" style={{ fontSize: '36px', lineHeight: '44px' }}>
+                    {item.step}
+                  </span>
                   <div>
-                    <h3 className="font-display text-xl font-bold text-gray-900">{item.title}</h3>
-                    <p className="text-gray-600 mt-1">{item.desc}</p>
+                    <h3 className="font-display font-medium text-subheading text-ink" style={{ fontSize: '22px', lineHeight: '28px', marginBottom: '8px' }}>
+                      {item.title}
+                    </h3>
+                    <p className="body-text" style={{ color: '#000' }}>{item.desc}</p>
                   </div>
                 </li>
               ))}
             </ol>
           </div>
         </section>
-        <section id="quote" className="py-20 bg-primary-900 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Create Your Dream Dressing Room</h2>
-            <p className="text-primary-100 mb-8 max-w-2xl mx-auto">Book a free design visit. We'll bring samples, create 3D designs, and quote on the spot.</p>
-            <a href="/contact" className="inline-block bg-white text-primary-900 hover:bg-primary-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Get Your Free Quote</a>
+
+        {/* CTA Section */}
+        <section id="quote" className="section-rust" aria-labelledby="cta-heading" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+          <div className="content-container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 id="cta-heading" className="display-marker" style={{ marginBottom: '20px', color: '#000' }}>
+              CREATE YOUR DREAM DRESSING ROOM
+            </h2>
+            <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px', color: '#000' }}>
+              Book a free design visit. We&rsquo;ll bring samples, create 3D designs, and quote on the spot.
+            </p>
+            <a
+              href="/contact"
+              className="font-body text-body-sm text-ink border border-ink px-8 py-4 hover:bg-ink hover:text-bone transition-all inline-block"
+            >
+              Get Your Free Quote
+            </a>
           </div>
         </section>
       </main>

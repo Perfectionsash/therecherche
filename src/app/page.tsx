@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { Header } from '@/components/Header';
-import { Hero } from '@/components/Hero';
+import Hero from '@/components/Hero';
 import { Portfolio } from '@/components/Portfolio';
 import { BrandStory } from '@/components/BrandStory';
 import { LocalDesigners } from '@/components/LocalDesigners';

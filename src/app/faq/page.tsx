@@ -100,37 +100,45 @@ export default function FAQPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <main className="min-h-screen">
-        <section className="py-20 bg-primary-50" aria-labelledby="page-title">
-          <div className="container mx-auto px-4 text-center">
-            <h1 id="page-title" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
+      <main className="min-h-screen bg-bone">
+        {/* Hero Section */}
+        <section className="section-bone" style={{ paddingTop: '100px', paddingBottom: '80px' }}>
+          <div className="content-container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <h1 className="display-marker" style={{ marginBottom: '20px' }}>
+              FREQUENTLY ASKED QUESTIONS
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px' }}>
               Everything you need to know about our bespoke storage solutions.
             </p>
           </div>
         </section>
-        <section className="py-20" aria-labelledby="faqs-heading">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <div className="space-y-4" role="list">
-                {faqs.map((faq, i) => (
-                  <details key={i} className="group bg-white border border-gray-200 rounded-xl overflow-hidden" role="listitem">
-                    <summary className="flex items-center justify-between p-6 cursor-pointer list-none focus:outline-none focus:ring-2 focus:ring-primary-500">
-                      <h3 className="font-semibold text-gray-900 pr-4">{faq.q}</h3>
-                      <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div className="px-6 pb-6 text-gray-600 border-t border-gray-100">
-                      <p>{faq.a}</p>
-                    </div>
-                  </details>
-                ))}
-              </div>
-              <div className="text-center mt-12">
-                <p className="text-gray-600 mb-4">Didn't find your answer?</p>
-                <a href="/contact" className="inline-block bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">Ask Us Directly</a>
-              </div>
+
+        {/* FAQs Section */}
+        <section className="section-bone" aria-labelledby="faqs-heading" style={{ paddingTop: '60px', paddingBottom: '80px' }}>
+          <div className="content-container" style={{ maxWidth: '900px', margin: '0 auto', paddingLeft: '20px', paddingRight: '20px' }}>
+            <div className="space-y-4" role="list">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group border border-ink bg-bone" style={{ borderRadius: '0' }} role="listitem">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none focus:outline-none" style={{ borderRadius: '0' }}>
+                    <h3 className="font-display font-medium text-subheading text-ink pr-4" style={{ fontSize: '22px', lineHeight: '28px' }}>
+                      {faq.q}
+                    </h3>
+                    <svg className="w-6 h-6 text-ink group-open:rotate-180 transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  </summary>
+                  <div className="px-6 pb-6 body-text border-t border-ink" style={{ color: '#000' }}>
+                    <p>{faq.a}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '40px' }}>
+              <p className="body-text" style={{ marginBottom: '20px', color: '#000' }}>Didn&rsquo;t find your answer?</p>
+              <a
+                href="/contact"
+                className="font-body text-body-sm text-ink border border-ink px-8 py-4 hover:bg-ink hover:text-bone transition-all inline-block"
+              >
+                Ask Us Directly
+              </a>
             </div>
           </div>
         </section>

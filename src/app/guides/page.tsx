@@ -66,38 +66,46 @@ export default function GuidesPage() {
   return (
     <>
       <JsonLd data={guidesSchema} />
-      <main className="min-h-screen">
-        <section className="py-20 bg-primary-50" aria-labelledby="page-title">
-          <div className="container mx-auto px-4 text-center">
-            <h1 id="page-title" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-              Guides & Inspiration
+      <main className="min-h-screen bg-bone">
+        {/* Hero Section */}
+        <section className="section-bone" style={{ paddingTop: '100px', paddingBottom: '80px' }}>
+          <div className="content-container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <h1 className="display-marker" style={{ marginBottom: '20px' }}>
+              GUIDES & INSPIRATION
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px' }}>
               Expert advice, design trends, and practical guides for your storage project.
             </p>
           </div>
         </section>
-        <section className="py-20" aria-labelledby="guides-heading">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
+
+        {/* Guides Grid */}
+        <section className="section-bone" aria-labelledby="guides-heading" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
+          <div className="content-container" style={{ maxWidth: '1400px', margin: '0 auto', paddingLeft: '20px', paddingRight: '20px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
               {guides.map((guide, i) => (
-                <article key={i} className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all" role="listitem">
-                  <div className="aspect-[16/9] bg-gray-100 relative">
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
-                    </div>
-                    <span className="absolute top-3 left-3 bg-primary-100 text-primary-700 text-xs font-medium px-2 py-1 rounded">{guide.category}</span>
+                <article key={i} className="group" role="listitem">
+                  <div className="photo-frame" style={{ aspectRatio: '16/9', marginBottom: '16px' }}>
+                    <img
+                      src="/guide-placeholder.jpg"
+                      alt={`${guide.title} featured image`}
+                      loading="lazy"
+                    />
+                    <span className="absolute top-3 left-3 font-body text-body-sm text-ink bg-bone/90 px-3 py-1" style={{ border: '1px solid #e8e0d0' }}>
+                      {guide.category}
+                    </span>
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 text-body-sm" style={{ color: '#000', opacity: 0.6 }}>
                       <time dateTime={guide.date}>{new Date(guide.date).toLocaleDateString('en-GB', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
                       <span>•</span>
                       <span>{guide.readTime}</span>
                     </div>
-                    <h3 className="font-display text-lg font-bold text-gray-900 mb-2">{guide.title}</h3>
-                    <p className="text-gray-600 mb-4">{guide.desc}</p>
-                    <a href={`/guides/${guide.slug}`} className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center gap-1">
-                      Read Guide <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    <h3 className="font-display font-medium text-subheading text-ink" style={{ fontSize: '22px', lineHeight: '28px' }}>{guide.title}</h3>
+                    <p className="body-text" style={{ color: '#000' }}>{guide.desc}</p>
+                    <a href={`/guides/${guide.slug}`} className="link-plain font-body text-body-sm inline-flex items-center gap-2" style={{ color: '#000' }}>
+                      Read Guide
+                      <span aria-hidden="true">→</span>
                     </a>
                   </div>
                 </article>
@@ -105,11 +113,22 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
-        <section className="py-20 bg-primary-900 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Need Personalised Advice?</h2>
-            <p className="text-primary-100 mb-8 max-w-2xl mx-auto">Our designers can assess your space and recommend the perfect solution — free of charge.</p>
-            <a href="/contact" className="inline-block bg-white text-primary-900 hover:bg-primary-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Book Free Consultation</a>
+
+        {/* CTA Section */}
+        <section className="section-rust" aria-labelledby="cta-heading" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+          <div className="content-container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 id="cta-heading" className="display-marker" style={{ marginBottom: '20px', color: '#000' }}>
+              NEED PERSONALISED ADVICE?
+            </h2>
+            <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px', color: '#000' }}>
+              Our designers can assess your space and recommend the perfect solution — free of charge.
+            </p>
+            <a
+              href="/contact"
+              className="font-body text-body-sm text-ink border border-ink px-8 py-4 hover:bg-ink hover:text-bone transition-all inline-block"
+            >
+              Book Free Consultation
+            </a>
           </div>
         </section>
       </main>
