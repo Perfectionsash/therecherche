@@ -7,12 +7,12 @@ export const metadata: Metadata = {
 };
 
 const reviews = [
-  { name: 'Sarah & James M.', location: 'Chelsea, London', project: 'Fitted Wardrobes', rating: 5, text: 'From design visit to installation, everything was seamless. Our designer Sarah understood exactly what we wanted and the fitting team were incredible — clean, precise, and respectful of our home. The finished wardrobes have transformed our bedroom.', date: '2024-01-15' },
+  { name: 'Sarah & James M.', location: 'Chelsea, London', project: 'Fitted Wardrobes', rating: 5, text: 'From design visit to installation, everything was seamless. The team understood exactly what we wanted and the fitting team were incredible — clean, precise, and respectful of our home. The finished wardrobes have transformed our bedroom.', date: '2024-01-15' },
   { name: 'David T.', location: 'Guildford, Surrey', project: 'Walk-In Wardrobe', rating: 5, text: 'The quality is exceptional. Every detail — the soft-close drawers, the lighting, the jewellery storage — has been thought through. It\'s been 18 months and everything still works perfectly. Worth every penny.', date: '2024-01-08' },
   { name: 'Emma & Robert K.', location: 'Hampstead, London', project: 'Sliding Wardrobe Doors', rating: 5, text: 'We had an awkward alcove with a sloping ceiling. Other companies said it couldn\'t be done. The Recherche designed a beautiful solution with mirrored sliding doors that maximised every inch. Highly recommended.', date: '2023-12-20' },
   { name: 'Lisa P.', location: 'Bristol, Clifton', project: 'Home Office Storage', rating: 5, text: 'Working from home full-time, I needed a proper office. The integrated desk with cable management and floor-to-ceiling shelving has made such a difference. The design team even suggested monitor arms I hadn\'t thought of.', date: '2023-12-12' },
   { name: 'Michael & Priya S.', location: 'Richmond, London', project: 'Fitted Wardrobes', rating: 5, text: 'Professional from start to finish. Fixed quote after the design visit — no surprises. Installation took 1.5 days and they left the room spotless. The 10-year guarantee gives real peace of mind.', date: '2023-11-28' },
-  { name: 'Catherine W.', location: 'Oxford', project: 'Media & TV Unit', rating: 5, text: 'Bespoke TV wall with hidden cables, speaker integration, and display shelves for our art. The designer came to our home with samples and 3D visualisations. It\'s the focal point of our living room now.', date: '2023-11-15' },
+  { name: 'Catherine W.', location: 'Oxford', project: 'Media & TV Unit', rating: 5, text: 'Bespoke TV wall with hidden cables, speaker integration, and display shelves for our art. The team came to our home with samples and 3D visualisations. It\'s the focal point of our living room now.', date: '2023-11-15' },
 ];
 
 export default function ReviewsPage() {

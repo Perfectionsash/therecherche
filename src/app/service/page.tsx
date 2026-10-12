@@ -10,7 +10,7 @@ const serviceSteps = [
   {
     number: '01',
     title: 'HOME DESIGN VISIT',
-    description: 'Your designer visits, measures, discusses needs, and photographs the space. Free, no obligation.',
+    description: 'We visit, measure, discuss needs, and photograph the space. Free, no obligation.',
   },
   {
     number: '02',

@@ -88,7 +88,7 @@ export default function FittedWardrobesPage() {
                   Designed Around You
                 </h3>
                 <p className="body-text" style={{ marginBottom: '20px' }}>
-                  Every wardrobe is unique. Our designers create 3D visualisations showing exactly how your wardrobe will look in your space.
+                  Every wardrobe is unique. We create 3D visualisations showing exactly how your wardrobe will look in your space.
                 </p>
                 <p className="body-text" style={{ marginBottom: '30px' }}>
                   Choose from hundreds of door styles, finishes, and internal configurations including hanging rails, shelves, drawers, shoe racks, and accessory storage.

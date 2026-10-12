@@ -3,7 +3,7 @@ import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Free Design Consultation',
-  description: 'Free home design consultation for bespoke fitted wardrobes. Our designers visit you, measure your space, create 3D visualisations, and provide a fixed quote.',
+  description: 'Free home design consultation for bespoke fitted wardrobes. We visit you, measure your space, create 3D visualisations, and provide a fixed quote.',
 };
 
 export default function FreeDesignPage() {
@@ -17,7 +17,7 @@ export default function FreeDesignPage() {
               FREE DESIGN CONSULTATION
             </h1>
             <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px' }}>
-              Our designers visit your home — no need to travel. They'll measure your space, discuss your storage needs, and create initial 3D designs on the spot.
+              We visit your home — no need to travel. We'll measure your space, discuss your storage needs, and create initial 3D designs on the spot.
             </p>
           </div>
         </section>

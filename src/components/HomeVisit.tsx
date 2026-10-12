@@ -122,7 +122,7 @@ export function HomeVisit() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              Our designers visit you — no need to travel. They&rsquo;ll measure your space, discuss your storage needs, and create initial 3D designs on the spot.
+              We visit you — no need to travel. Our team will measure your space, discuss your storage needs, and create initial 3D designs on the spot.
             </motion.p>
 
             <motion.p

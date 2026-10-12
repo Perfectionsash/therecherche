@@ -56,7 +56,7 @@ export default function AccessoriesPage() {
                 PLANNING YOUR INTERIOR
               </h2>
               <p className="body-text" style={{ color: '#000', marginBottom: '20px', textAlign: 'center', maxWidth: '700px', margin: '0 auto 30px' }}>
-                Our designers create a 3D interior layout during your consultation — you choose exactly what goes where. Adjustable shelving means your storage evolves with you.
+                We create a 3D interior layout during your consultation — you choose exactly what goes where. Adjustable shelving means your storage evolves with you.
               </p>
               <a
                 href="/contact"

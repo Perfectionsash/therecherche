@@ -118,7 +118,7 @@ export default function WalkInWardrobesPage() {
             <ol className="space-y-8" role="list" style={{ maxWidth: '900px', margin: '0 auto' }}>
               {[
                 { step: '01', title: 'Consultation', desc: 'We visit your home, discuss your needs, and measure the space.' },
-                { step: '02', title: '3D Design', desc: 'Our designers create photorealistic 3D visualisations of your walk-in.' },
+                { step: '02', title: '3D Design', desc: 'We create photorealistic 3D visualisations of your walk-in.' },
                 { step: '03', title: 'Specification', desc: 'You choose finishes, accessories, lighting, and layout details.' },
                 { step: '04', title: 'Manufacturing', desc: 'Hand-crafted in our UK workshop using premium materials (3–4 weeks).' },
                 { step: '05', title: 'Installation', desc: 'Professional fitting by our experienced team (typically 2–3 days).' },

@@ -77,7 +77,7 @@ export function BrandStory() {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                Our designers work with you to create 3D visualisations, selecting from an extensive range of finishes, door styles, and internal configurations. Our craftsmen then build each wardrobe to exacting standards, and our installation teams fit with precision and care — typically in just one to two days.
+                Our team works with you to create 3D visualisations, selecting from an extensive range of finishes, door styles, and internal configurations. Our craftsmen then build each wardrobe to exacting standards, and our installation teams fit with precision and care — typically in just one to two days.
               </motion.p>
             </motion.div>
 

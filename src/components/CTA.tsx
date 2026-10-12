@@ -64,7 +64,7 @@ export function CTA() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              Book your free, no-obligation design consultation. Our expert designers will visit your home, measure your space, and create a bespoke 3D visualisation.
+              Book your free, no-obligation design consultation. Our team will visit your home, measure your space, and create a bespoke 3D visualisation.
             </motion.p>
 
             {/* Trust signals */}

@@ -15,12 +15,6 @@ const areas = [
   'Surrounding towns & villages',
 ];
 
-const designers = [
-  { name: 'Charlotte Whitaker', location: 'Oxford Studio', coverage: 'Oxfordshire, Cotswolds, Buckinghamshire' },
-  { name: 'Henry Villiers', location: 'Cheltenham Studio', coverage: 'Gloucestershire, Worcestershire, Warwickshire' },
-  { name: 'Isabel Thornton', location: 'Reading Studio', coverage: 'Berkshire, Hampshire, Surrey borders' },
-];
-
 export default function OxfordPage() {
   return (
     <>
@@ -32,7 +26,7 @@ export default function OxfordPage() {
               OXFORD & COTSWOLDS
             </h1>
             <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px' }}>
-              Local designers covering Oxford, the Cotswolds, Buckinghamshire, Berkshire and surrounding villages.
+              We cover Oxford, the Cotswolds, Buckinghamshire, Berkshire and surrounding villages.
             </p>
           </div>
         </section>
@@ -46,32 +40,6 @@ export default function OxfordPage() {
               {areas.map((area, i) => (
                 <div key={i} className="p-6 text-center" style={{ border: '1px solid #e8e0d0' }}>
                   <p className="body-text font-medium text-ink" style={{ color: '#000' }}>{area}</p>
-                </div>
-              ))}
-            </div>
-
-            <h2 className="display-marker" style={{ marginBottom: '40px', fontSize: '36px', textAlign: 'center' }}>
-              YOUR LOCAL DESIGNERS
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {designers.map((designer, i) => (
-                <div key={i} className="p-6" style={{ border: '1px solid #e8e0d0' }}>
-                  <div className="photo-frame" style={{ aspectRatio: '1/1', marginBottom: '20px', width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 20px' }}>
-                    <img
-                      src={`/designer-${i + 7}.jpg`}
-                      alt={designer.name}
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 className="font-display font-medium text-subheading text-ink text-center mb-2" style={{ fontSize: '22px', lineHeight: '28px' }}>
-                    {designer.name}
-                  </h3>
-                  <p className="body-text text-center text-ink font-medium mb-2" style={{ fontSize: '14px', color: '#af6446' }}>
-                    {designer.location}
-                  </p>
-                  <p className="body-text text-center" style={{ color: '#000', fontSize: '14px' }}>
-                    {designer.coverage}
-                  </p>
                 </div>
               ))}
             </div>

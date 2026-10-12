@@ -96,7 +96,7 @@ export default function SouthEastPage() {
               BOOK A SOUTH EAST DESIGN VISIT
             </h2>
             <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px', color: '#000' }}>
-              Our designers cover the entire Home Counties region. Free consultation, 3D designs, fixed quote.
+              We cover the entire Home Counties region. Free consultation, 3D designs, fixed quote.
             </p>
             <a
               href="/contact"

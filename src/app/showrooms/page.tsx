@@ -79,7 +79,7 @@ export default function ShowroomsPage() {
               BOOK A SHOWROOM APPOINTMENT
             </h2>
             <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px', color: '#000' }}>
-              Get a guided tour with a designer, see materials in person, and start your project.
+              Get a guided tour, see materials in person, and start your project.
             </p>
             <a
               href="/contact"

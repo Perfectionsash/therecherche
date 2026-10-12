@@ -121,7 +121,7 @@ export default function GuidesPage() {
               NEED PERSONALISED ADVICE?
             </h2>
             <p className="subheading" style={{ maxWidth: '700px', margin: '0 auto 40px', color: '#000' }}>
-              Our designers can assess your space and recommend the perfect solution — free of charge.
+              We can assess your space and recommend the perfect solution — free of charge.
             </p>
             <a
               href="/contact"

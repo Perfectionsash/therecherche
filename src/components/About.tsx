@@ -10,7 +10,7 @@ const stats = [
 const features = [
   {
     title: 'Free Design Consultation',
-    description: 'Our expert designers visit your home to measure, advise, and create 3D visualisations of your new storage.',
+    description: 'Our team visits your home to measure, advise, and create 3D visualisations of your new storage.',
   },
   {
     title: 'UK Manufactured',
