@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
@@ -70,10 +71,17 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-display font-medium text-xl md:text-2xl tracking-tight text-ink dark:text-cream hover:opacity-80 transition-opacity z-10"
+            className="hover:opacity-80 transition-opacity z-10"
             aria-label="The Recherche - Home"
           >
-            THE RECHERCHE
+            <Image
+              src="/logo.png"
+              alt="The Recherche"
+              width={180}
+              height={29}
+              className="h-auto w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
