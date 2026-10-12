@@ -118,34 +118,6 @@ export function Header() {
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </button>
-
-                {/* Dropdown Panel */}
-                <AnimatePresence>
-                  {openDropdown === index && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10, scaleY: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scaleY: 1 }}
-                      exit={{ opacity: 0, y: -10, scaleY: 0.95 }}
-                      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 lg:w-72 bg-panel dark:bg-charcoal ring-1 ring-ink/5 dark:ring-cream/10 rounded-2xl shadow-xl p-4 z-50"
-                      role="menu"
-                    >
-                      <ul className="space-y-1">
-                        {dropdown.items.map((item, i) => (
-                          <li key={i} role="none">
-                            <Link
-                              href={item.href}
-                              className="block font-body text-sm text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream hover:bg-ink/5 dark:hover:bg-cream/5 px-3 py-2.5 rounded-xl transition-all duration-200"
-                              role="menuitem"
-                            >
-                              {item.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
               </div>
             ))}
 
