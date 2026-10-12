@@ -246,23 +246,25 @@ export function Header() {
             <div className="container mx-auto px-6 md:px-12 py-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                 {dropdowns.map((dropdown, index) => (
-                  <div key={index} className="dropdown-column">
-                    <h3 className="font-display font-medium text-base text-ink dark:text-cream mb-5">
-                      {dropdown.label}
-                    </h3>
-                    <ul className="space-y-2.5">
-                      {dropdown.items.map((item, i) => (
-                        <li key={i}>
-                          <Link
-                            href={item.href}
-                            className="block font-body text-sm text-ink/70 dark:text-cream/70 hover:text-rust dark:hover:text-rust hover:translate-x-1 transition-all duration-200"
-                          >
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  index === openDropdown ? (
+                    <div key={index} className="dropdown-column">
+                      <h3 className="font-display font-medium text-base text-ink dark:text-cream mb-5">
+                        {dropdown.label}
+                      </h3>
+                      <ul className="space-y-2.5">
+                        {dropdown.items.map((item, i) => (
+                          <li key={i}>
+                            <Link
+                              href={item.href}
+                              className="block font-body text-sm text-ink/70 dark:text-cream/70 hover:text-rust dark:hover:text-rust hover:translate-x-1 transition-all duration-200"
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null
                 ))}
               </div>
             </div>
