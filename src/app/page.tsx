@@ -3,7 +3,6 @@ import { Header } from '@/components/Header';
 import Hero from '@/components/Hero';
 import { Portfolio } from '@/components/Portfolio';
 import { BrandStory } from '@/components/BrandStory';
-import { LocalDesigners } from '@/components/LocalDesigners';
 import { HomeVisit } from '@/components/HomeVisit';
 import { Collections } from '@/components/Collections';
 import { Footer } from '@/components/Footer';
@@ -112,7 +111,6 @@ export default function HomePage() {
           <Hero />
           <Portfolio />
           <BrandStory />
-          <LocalDesigners />
           <HomeVisit />
           <Collections />
         </main>
