@@ -89,7 +89,7 @@ export function BrandStory() {
               transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="border-t border-ink/10 dark:border-cream/10 pt-6">
-                <dt className="font-display text-4xl font-bold text-ink dark:text-cream tracking-tight">2008</dt>
+                <dt className="font-display text-4xl font-bold text-ink dark:text-cream tracking-tight">2013</dt>
                 <dd className="caption text-ink/50 dark:text-cream/50 mt-1">Established</dd>
               </div>
               <div className="border-t border-ink/10 dark:border-cream/10 pt-6">

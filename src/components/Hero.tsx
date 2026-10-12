@@ -109,7 +109,7 @@ export default function Hero() {
               className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-panel dark:bg-charcoal-light ring-1 ring-ink/5 dark:ring-cream/10 text-xs font-body font-medium uppercase tracking-[0.2em] text-ink/60 dark:text-cream/60 mb-10"
             >
               <span className="w-2 h-2 rounded-full bg-rust" />
-              Since 2008 · UK Manufactured · 10-Year Guarantee
+              Since 2013 · UK Manufactured · 10-Year Guarantee
             </motion.span>
 
             {/* Main Headline - Editorial scale */}

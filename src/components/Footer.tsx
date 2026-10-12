@@ -83,7 +83,7 @@ export function Footer() {
               THE RECHERCHE
             </Link>
             <p className="body-text-base text-ink/50 dark:text-cream/50 leading-relaxed max-w-xs mb-8">
-              Bespoke fitted wardrobes, sliding doors & whole-home storage. Designed in your home, crafted in our UK workshops since 2008.
+              Bespoke fitted wardrobes, sliding doors & whole-home storage. Designed in your home, crafted in our UK workshops since 2013.
             </p>
             <div className="flex items-center gap-3 text-sm font-body text-ink/60 dark:text-cream/60">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-rust flex-shrink-0">
