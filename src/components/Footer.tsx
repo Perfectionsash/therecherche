@@ -50,17 +50,6 @@ const footerLinks = {
   },
 };
 
-const showrooms = [
-  'London Chelsea',
-  'London Hampstead',
-  'Surrey Guildford',
-  'Oxford Oxfordshire',
-  'Bristol Clifton',
-  'Manchester Spinningfields',
-  'Edinburgh New Town',
-  'International Enquiries',
-];
-
 export function Footer() {
   return (
     <footer className="section-canvas border-t border-ink/5 dark:border-cream/10" aria-labelledby="footer-heading">
@@ -122,30 +111,6 @@ export function Footer() {
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Showroom Finder */}
-        <div className="py-12 lg:py-16 border-b border-ink/5 dark:border-cream/10">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-8">
-            <h3 className="font-display font-medium text-xl md:text-2xl text-ink dark:text-cream">
-              FIND A SHOWROOM
-            </h3>
-            <Link href="/showrooms" className="link-plain font-body text-base self-start">
-              View All Showrooms
-              <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
-            {showrooms.map((showroom, index) => (
-              <Link
-                key={index}
-                href="/showrooms"
-                className="font-body text-sm text-ink/70 dark:text-cream/70 hover:text-rust dark:hover:text-rust px-4 py-3 rounded-xl bg-ink/3 dark:bg-cream/3 hover:bg-ink/5 dark:hover:bg-cream/5 transition-all duration-200 text-center"
-              >
-                {showroom}
-              </Link>
             ))}
           </div>
         </div>
