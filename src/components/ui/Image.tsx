@@ -4,7 +4,7 @@ import { forwardRef, ImgHTMLAttributes, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export interface CustomImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, "src" | "alt"> {
+export interface CustomImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, "src" | "alt" | "width" | "height"> {
   src: string;
   alt: string;
   fill?: boolean;

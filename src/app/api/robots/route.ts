@@ -1,0 +1,27 @@
+export async function GET() {
+  const robotsTxt = `# Robots.txt for therecherche.co.uk
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://therecherche.co.uk/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /*.json$
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 10
+
+# Host directive
+Host: https://therecherche.co.uk`;
+
+  return new Response(robotsTxt, {
+    headers: {
+      'Content-Type': 'text/plain',
+      'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
+    },
+  });
+}

@@ -1,3 +1,14 @@
+export interface JournalPost {
+  slug: string;
+  title: string;
+  date: string;
+  category: string;
+  excerpt: string;
+  featured: boolean;
+  image: string;
+  content: string;
+}
+
 export interface ProjectImage {
   src: string;
   alt: string;
@@ -5,7 +16,6 @@ export interface ProjectImage {
 }
 
 export interface KitchenProject {
-  id: string;
   slug: string;
   title: string;
   location: string;
@@ -19,11 +29,10 @@ export interface KitchenProject {
   completed: string;
   featured: boolean;
   images: ProjectImage[];
-  content: string; // MDX content
+  content: string;
 }
 
 export interface WardrobeProject {
-  id: string;
   slug: string;
   title: string;
   location: string;
@@ -37,25 +46,18 @@ export interface WardrobeProject {
   completed: string;
   featured: boolean;
   images: ProjectImage[];
-  content: string; // MDX content
+  content: string;
 }
 
 export type Project = KitchenProject | WardrobeProject;
 
-export interface ProjectListItem {
-  id: string;
+export interface Guide {
   slug: string;
   title: string;
-  location: string;
-  styleOrType: string;
+  date: string;
+  category: string;
+  excerpt: string;
+  featured: boolean;
   image: string;
-  description: string;
-  category: "kitchen" | "wardrobe";
-}
-
-export interface ProjectFilters {
-  category?: "kitchen" | "wardrobe";
-  style?: string;
-  type?: string;
-  location?: string;
+  content: string;
 }

@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import type { JournalPost, KitchenProject, WardrobeProject, Guide } from "@/types/project";
 
 const projectsDirectory = path.join(process.cwd(), "content/projects");
 const journalDirectory = path.join(process.cwd(), "content/journal");
@@ -14,7 +15,7 @@ export function getProjectSlugs(category: "kitchens" | "wardrobes"): string[] {
     .map((file) => file.replace(/\.mdx$/, ""));
 }
 
-export function getProjectBySlug(category: "kitchens" | "wardrobes", slug: string) {
+export function getProjectBySlug(category: "kitchens" | "wardrobes", slug: string): KitchenProject | WardrobeProject | null {
   const fullPath = path.join(projectsDirectory, category, `${slug}.mdx`);
   if (!fs.existsSync(fullPath)) return null;
 
@@ -25,20 +26,20 @@ export function getProjectBySlug(category: "kitchens" | "wardrobes", slug: strin
     slug,
     ...data,
     content,
-  };
+  } as KitchenProject | WardrobeProject;
 }
 
-export function getAllProjects(category: "kitchens" | "wardrobes") {
+export function getAllProjects(category: "kitchens" | "wardrobes"): (KitchenProject | WardrobeProject)[] {
   const slugs = getProjectSlugs(category);
   const projects = slugs
     .map((slug) => getProjectBySlug(category, slug))
-    .filter((project): project is NonNullable<typeof project> => project !== null)
+    .filter((project): project is KitchenProject | WardrobeProject => project !== null)
     .sort((a, b) => new Date(b.completed).getTime() - new Date(a.completed).getTime());
 
   return projects;
 }
 
-export function getFeaturedProjects(category: "kitchens" | "wardrobes", limit = 6) {
+export function getFeaturedProjects(category: "kitchens" | "wardrobes", limit = 6): (KitchenProject | WardrobeProject)[] {
   return getAllProjects(category)
     .filter((p) => p.featured)
     .slice(0, limit);
@@ -51,7 +52,7 @@ export function getJournalSlugs(): string[] {
     .map((file) => file.replace(/\.mdx$/, ""));
 }
 
-export function getJournalBySlug(slug: string) {
+export function getJournalBySlug(slug: string): JournalPost | null {
   const fullPath = path.join(journalDirectory, `${slug}.mdx`);
   if (!fs.existsSync(fullPath)) return null;
 
@@ -62,14 +63,14 @@ export function getJournalBySlug(slug: string) {
     slug,
     ...data,
     content,
-  };
+  } as JournalPost;
 }
 
-export function getAllJournalPosts() {
+export function getAllJournalPosts(): JournalPost[] {
   const slugs = getJournalSlugs();
   const posts = slugs
     .map((slug) => getJournalBySlug(slug))
-    .filter((post): post is NonNullable<typeof post> => post !== null)
+    .filter((post): post is JournalPost => post !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return posts;
@@ -82,7 +83,7 @@ export function getGuidesSlugs(): string[] {
     .map((file) => file.replace(/\.mdx$/, ""));
 }
 
-export function getGuideBySlug(slug: string) {
+export function getGuideBySlug(slug: string): Guide | null {
   const fullPath = path.join(guidesDirectory, `${slug}.mdx`);
   if (!fs.existsSync(fullPath)) return null;
 
@@ -93,14 +94,14 @@ export function getGuideBySlug(slug: string) {
     slug,
     ...data,
     content,
-  };
+  } as Guide;
 }
 
-export function getAllGuides() {
+export function getAllGuides(): Guide[] {
   const slugs = getGuidesSlugs();
   const guides = slugs
     .map((slug) => getGuideBySlug(slug))
-    .filter((guide): guide is NonNullable<typeof guide> => guide !== null)
+    .filter((guide): guide is Guide => guide !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return guides;

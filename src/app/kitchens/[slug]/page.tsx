@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CustomImage, Lightbox } from "@/components/ui/Image";
+import { CustomImage } from "@/components/ui/Image";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { getProjectBySlug, getAllProjects } from "@/lib/content";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import type { KitchenProject } from "@/types/project";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -12,7 +13,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const project = getProjectBySlug("kitchens", slug);
+  const project = getProjectBySlug("kitchens", slug) as KitchenProject | null;
 
   if (!project) {
     return { title: "Kitchen Not Found" };
@@ -36,13 +37,13 @@ export async function generateStaticParams() {
 
 export default async function KitchenProjectPage({ params }: Props) {
   const { slug } = await params;
-  const project = getProjectBySlug("kitchens", slug);
+  const project = getProjectBySlug("kitchens", slug) as KitchenProject | null;
 
   if (!project) {
     notFound();
   }
 
-  const allProjects = getAllProjects("kitchens");
+  const allProjects = getAllProjects("kitchens") as KitchenProject[];
   const currentIndex = allProjects.findIndex((p) => p.slug === slug);
   const prevProject = currentIndex > 0 ? allProjects[currentIndex - 1] : allProjects[allProjects.length - 1];
   const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : allProjects[0];
@@ -114,7 +115,7 @@ export default async function KitchenProjectPage({ params }: Props) {
           {project.images.length > 2 && (
             <div className="grid md:grid-cols-3 gap-6 mb-16">
               {project.images.slice(2).map((image, index) => (
-                <div key={index} className="relative aspect-square overflow-hidden group cursor-zoom-in" onClick={() => {}}>
+                <div key={index} className="relative aspect-square overflow-hidden group cursor-zoom-in">
                   <CustomImage
                     src={image.src}
                     alt={image.alt}
@@ -133,13 +134,7 @@ export default async function KitchenProjectPage({ params }: Props) {
             </div>
           )}
 
-          {/* Lightbox */}
-          <Lightbox
-            isOpen={false}
-            onClose={() => {}}
-            images={lightboxImages}
-          />
-        </div>
+                  </div>
       </section>
 
       {/* Project Details & Specs */}

@@ -8,11 +8,7 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["300", "400", "500", "600"],
-  variableConfig: {
-    weight: "100 900",
-    stretch: "75% 125%",
-  },
+  weight: "variable",
 });
 
 const dmSans = DM_Sans({

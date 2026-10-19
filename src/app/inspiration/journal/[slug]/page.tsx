@@ -34,7 +34,7 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export default function JournalPostPage({ params }: Props) {
+export default async function JournalPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getJournalBySlug(slug);
 

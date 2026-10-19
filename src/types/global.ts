@@ -1,8 +1,1 @@
-import "gray-matter";
-
-declare module "gray-matter" {
-  interface GrayMatterFile<FrontMatter = any> {
-    data: FrontMatter;
-    content: string;
-  }
-}
+// Type declarations - no longer needed with explicit types in content.ts and types/project.ts
