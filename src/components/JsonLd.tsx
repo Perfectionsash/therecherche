@@ -22,10 +22,10 @@ export function JsonLd({ type = "Organization", data = {} }: JsonLdProps) {
     email: "info@therecherche.co.uk",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "17 Craven Terrace",
+      streetAddress: "Ambassador Court, 17 Craven Terrace",
       addressLocality: "London",
       addressRegion: "Greater London",
-      postalCode: "W2 3QL",
+      postalCode: "W2 3QH",
       addressCountry: "GB"
     },
     geo: {
