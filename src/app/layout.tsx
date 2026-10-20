@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, DM_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     description: "Bespoke kitchens and fitted wardrobes, handcrafted in our London workshop. Made-to-measure joinery for kitchens, bedrooms, and living spaces.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
         alt: "The Recherche - Bespoke Kitchens & Fitted Wardrobes",
@@ -60,10 +61,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Recherche | Bespoke Kitchens & Fitted Wardrobes London",
     description: "Bespoke kitchens and fitted wardrobes, handcrafted in our London workshop.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.svg"],
   },
   verification: {
-    google: "google-site-verification-code",
+    google: "REPLACE_WITH_YOUR_GOOGLE_VERIFICATION_CODE",
   },
 };
 
@@ -89,6 +90,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       </head>
       <body className="min-h-full flex flex-col font-body text-charcoal bg-paper">
+        <JsonLd type="Organization" />
         <Header />
         <main className="flex-1 pt-20">{children}</main>
         <Footer />

@@ -38,10 +38,16 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-display text-2xl font-light text-charcoal hover:text-brass transition-colors"
+            className="hover:opacity-80 transition-opacity"
             aria-label="The Recherche - Home"
           >
-            The Recherche
+            <img
+              src="/logo.png"
+              alt="The Recherche"
+              className="h-12 w-auto"
+              width="1696"
+              height="284"
+            />
           </Link>
 
           {/* Desktop Navigation */}

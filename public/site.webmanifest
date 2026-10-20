@@ -1,26 +1,23 @@
 {
   "name": "The Recherche",
   "short_name": "The Recherche",
-  "description": "Bespoke fitted wardrobes, sliding doors, and home storage solutions",
+  "description": "Bespoke kitchens and fitted wardrobes, handcrafted in our London workshop",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f2edde",
-  "theme_color": "#f2edde",
+  "background_color": "#0D0D0D",
+  "theme_color": "#0D0D0D",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     },
     {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "/apple-touch-icon.png",
+      "src": "/apple-touch-icon.svg",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }

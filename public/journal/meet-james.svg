@@ -1,0 +1,5 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1C1815"/>
+  <text x="400" y="200" font-family="Georgia, serif" font-size="32" font-weight="300" fill="#C9A86B" text-anchor="middle">Meet the Team: James</text>
+  <text x="400" y="250" font-family="system-ui, sans-serif" font-size="16" fill="#8B7D6B" text-anchor="middle">Journal Article Image</text>
+</svg>

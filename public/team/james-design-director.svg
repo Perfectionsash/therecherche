@@ -1,0 +1,6 @@
+<svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="500" fill="#1C1815"/>
+  <text x="200" y="230" font-family="Georgia, serif" font-size="24" font-weight="300" fill="#C9A86B" text-anchor="middle">James</text>
+  <text x="200" y="270" font-family="system-ui, sans-serif" font-size="14" fill="#8B7D6B" text-anchor="middle">Design Director</text>
+  <text x="200" y="300" font-family="system-ui, sans-serif" font-size="12" fill="#8B7D6B" text-anchor="middle">Team Member Image</text>
+</svg>
