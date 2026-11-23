@@ -57,7 +57,7 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod=false'
-          vercel-cli-version: 'latest'
+          vercel-version: 'latest'
 
   deploy-production:
     needs: build
@@ -80,4 +80,4 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod=true'
-          vercel-cli-version: 'latest'
+          vercel-version: 'latest'
