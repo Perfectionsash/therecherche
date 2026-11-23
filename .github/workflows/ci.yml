@@ -37,8 +37,8 @@ jobs:
           retention-days: 1
 
   deploy-preview:
-    needs: bue±”
-    if: github.event_name == 'pull_request'
+    needs: build
+    if: github.event_name == 'pull_request' && secrets.VERCEL_TOKEN != ''
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifacts
@@ -49,18 +49,15 @@ jobs:
 
       - name: Deploy to Vercel Preview
         uses: amondnet/vercel-action@v25
-        if: env.VERCEL_TOKEN != ''
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod=false'
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
   deploy-production:
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && secrets.VERCEL_TOKEN != ''
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifacts
@@ -71,11 +68,8 @@ jobs:
 
       - name: Deploy to Vercel Production
         uses: amondnet/vercel-action@v25
-        if: env.VERCEL_TOKEN != ''
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod=true'
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
