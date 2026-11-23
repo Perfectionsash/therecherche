@@ -29,8 +29,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-40 transition-all duration-200",
-        isScrolled ? "bg-paper/95 backdrop-blur-sm border-b border-chalk" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-40 transition-all duration-200 bg-paper",
+        isScrolled && "border-b border-chalk"
       )}
     >
       <nav className="mx-auto max-w-[1400px] px-6" aria-label="Main navigation">

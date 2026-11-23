@@ -163,6 +163,11 @@ export function Footer() {
               ))}
             </nav>
             <div className="mt-6">
+              <address className="not-italic text-sm text-chalk leading-relaxed mb-4">
+                17 Craven Terrace<br />
+                London W2 3QH
+              </address>
+              <p className="text-sm text-chalk mb-4">Mon–Fri 9am–6pm</p>
               <a href="tel:+442035610820" className="text-sm text-chalk hover:text-brass transition-colors block mb-2">
                 +44 203 561 0820
               </a>
