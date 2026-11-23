@@ -82,7 +82,7 @@ export default function Home() {
             <article className="group relative overflow-hidden">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <CustomImage
-                  src="/kitchens-hero.jpg"
+                  src="/hero-main.jpg"
                   alt="Bespoke kitchen interior"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -132,7 +132,7 @@ export default function Home() {
             <article className="group relative overflow-hidden">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <CustomImage
-                  src="/joinery-hero.jpg"
+                  src="/project-wood-library.jpg"
                   alt="Media wall and home office joinery"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
