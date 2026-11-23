@@ -1,9 +1,24 @@
 import type { Metadata, Viewport } from "next";
+import { Fraunces, DM_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: "variable",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-ui",
+  display: "swap",
+  weight: ["400", "500"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://therecherche.co.uk"),
@@ -70,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-GB" className="h-full antialiased">
+    <html lang="en-GB" className={`${fraunces.variable} ${dmSans.variable} h-full antialiased`}>
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
