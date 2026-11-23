@@ -38,7 +38,7 @@ jobs:
 
   deploy-preview:
     needs: build
-    if: github.event_name == 'pull_request' && secrets.VERCEL_TOKEN != ''
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifacts
@@ -57,7 +57,7 @@ jobs:
 
   deploy-production:
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && secrets.VERCEL_TOKEN != ''
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifacts
