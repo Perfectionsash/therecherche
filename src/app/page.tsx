@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <CustomImage
-            src="/heroes/home-hero.svg"
+            src="/hero-main.jpg"
             alt="Bespoke kitchen by The Recherche"
             fill
             priority
@@ -82,7 +82,7 @@ export default function Home() {
             <article className="group relative overflow-hidden">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <CustomImage
-                  src="/heroes/kitchens-category.svg"
+                  src="/kitchens-hero.jpg"
                   alt="Bespoke kitchen interior"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -107,7 +107,7 @@ export default function Home() {
             <article className="group relative overflow-hidden">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <CustomImage
-                  src="/heroes/wardrobes-category.svg"
+                  src="/hero-wardrobe-1.jpg"
                   alt="Fitted wardrobe interior"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -132,7 +132,7 @@ export default function Home() {
             <article className="group relative overflow-hidden">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <CustomImage
-                  src="/heroes/joinery-category.svg"
+                  src="/joinery-hero.jpg"
                   alt="Media wall and home office joinery"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
